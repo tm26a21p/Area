@@ -15,16 +15,6 @@ import (
 	"github.com/joho/godotenv"
 )
 
-/*
-
-	1. goroutine on the API // OK
-	2. goroutine on the manager // OK
-
-	3. the manager gets all applets with a status of true // OK
-	4. for each applet, it runs a go routine listening on the trigger
-
-*/
-
 func api() {
 	r, err := router.New()
 
@@ -60,7 +50,11 @@ func runAll() {
 func main() {
 	rand.Seed(time.Now().Unix())
 
-	if err := godotenv.Load(); err != nil {
+	log.Println("Starting server...")
+	if err := godotenv.Load("./.env"); err != nil {
+		// print pwd
+		pwd, _ := os.Getwd()
+		log.Printf("PWD: %s\n", pwd)
 		log.Printf("Error at .env loading: %s\n", err.Error())
 		return
 	}

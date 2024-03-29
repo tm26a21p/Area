@@ -49,7 +49,10 @@ func readServiceConfig(path string) ServiceJSONInput {
 	// defer the closing of our jsonFile so that we can parse it later on
 	byteValue, _ := io.ReadAll(jsonFile)
 	var service ServiceJSONInput
-	json.Unmarshal(byteValue, &service)
+	err = json.Unmarshal(byteValue, &service)
+	if err != nil {
+		log.Println("couldnt unmarshal the file due to : ", err)
+	}
 	defer jsonFile.Close()
 	return service
 }
@@ -114,7 +117,10 @@ func ConnectToDB() error {
 		return err
 	}
 
-	db.AutoMigrate(&User{}, &Token{}, &Service{}, &Applet{}, &Area{})
+	if err := db.AutoMigrate(&User{}, &Token{}, &Service{}, &Applet{}, &Area{}); err != nil {
+		return err
+	}
+
 	firstEverDBinput(db)
 	DB = db
 

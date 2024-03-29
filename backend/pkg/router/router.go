@@ -11,6 +11,10 @@ import (
 
 func New() (*gin.Engine, error) {
 	r := gin.New()
+	r.ForwardedByClientIP = true
+	if e := r.SetTrustedProxies([]string{"127.0.0.1"}) ; e != nil {
+		return nil, e
+	}
 
 	r.Use(middlewares.GetCorsHandler())
 

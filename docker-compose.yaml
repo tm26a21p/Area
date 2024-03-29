@@ -1,9 +1,7 @@
-version: '3.8'
-
+version: '3.9'
 services:
   frontend-web:
     build: ./frontend
-    command: ["./waitforfile.sh", "/frontend/area/build/app/outputs/flutter-apk/app-release.apk"]
     volumes:
       - area:/frontend
     ports:
@@ -21,13 +19,9 @@ services:
     ports:
       - "5432:5432"
     environment:
-      - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=ABCDEFG
+      - POSTGRES_USER=postgres
       - POSTGRES_DB=postgres
-  mobile-app:
-    build: ./mobile-app
-    volumes:
-      - area:/mobile-app
 
 volumes:
   area:
