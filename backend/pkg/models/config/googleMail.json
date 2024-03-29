@@ -1,0 +1,53 @@
+{
+    "Name": "Gmail",
+    "Description": "Gmail (pronounced Gee-mail) is a free Web-based e-mail service that provides users with a gigabyte of storage for messages and provides the ability to search for specific messages. The Gmail program also automatically organizes successively related messages into a conversational thread.",
+    "Icon": "https://www.freepnglogos.com/uploads/logo-gmail-png/logo-gmail-png-gmail-clipart-clipground-24.jpg",
+    "Color": "#e3dada",
+    "button": {
+        "provider": "google",
+        "client_id": "425480709650-p65s65mki3ot2hojl7c49vtflnktg8g9.apps.googleusercontent.com",
+        "redirect_uri": "postmessage",
+        "auth": "https://accounts.google.com/o/oauth2/auth",
+        "scopes" : "https://mail.google.com/ https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email"
+    },
+    "actions": [
+        {
+            "Name": "Receive Email",
+            "Description": "When a new email is received in your Gmail account Inbox",
+            "IsTemplate": true,
+            "IsAction": true,
+            "Config": "",
+            "function_name": "ReceiveGoogleEmail",
+            "Applet_id": 1
+        }
+    ],
+    "reactions": [
+        {
+            "Name": "Send Email",
+            "Description": "Send an email to anyone with with Google mail",
+            "IsTemplate": true,
+            "IsAction": false,
+            "Config": "to:mail|subject:text|body:text",
+            "function_name": "SendGoogleEmail",
+            "Applet_id": 1
+        },
+        {
+            "Name": "Send yourself an email",
+            "Description": "Send an email to yourself with Google mail",
+            "IsTemplate": true,
+            "IsAction": false,
+            "Config": "subject:text|body:text",
+            "function_name": "SendGoogleEmailToYourself",
+            "Applet_id": 1
+        },
+        {
+            "Name": "Empty Trash",
+            "Description": "Delete all emails in the trash",
+            "IsTemplate": true,
+            "IsAction": false,
+            "Config": "",
+            "function_name": "GmailEmptyTrash",
+            "Applet_id": 1
+        }
+    ]
+}

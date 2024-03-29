@@ -1,0 +1,53 @@
+{
+    "Name": "Youtube",
+    "Description": "YouTube is a free video sharing website that makes it easy to watch online videos. You can even create and upload your own videos to share with others.",
+    "Icon": "https://www.freepnglogos.com/uploads/youtube-logo-hd-8.png",
+    "Color": "#f76868",
+    "button": {
+        "provider": "google",
+        "client_id": "425480709650-p65s65mki3ot2hojl7c49vtflnktg8g9.apps.googleusercontent.com",
+        "redirect_uri": "postmessage",
+        "auth": "https://accounts.google.com/o/oauth2/auth",
+        "scopes" : "https://www.googleapis.com/auth/youtube.force-ssl https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email"
+    },
+    "actions": [
+    ],
+    "reactions": [
+        {
+            "Name": "Comment a Youtube video",
+            "Description": "Post a comment to a video on Youtube",
+            "IsTemplate": true,
+            "IsAction": false,
+            "Config": "videoUrl:url|comment:text",
+            "function_name": "CommentYoutubeVideo",
+            "Applet_id": 1
+        },
+        {
+            "Name": "Like a Youtube video",
+            "Description": "Add a like to a video on Youtube",
+            "IsTemplate": true,
+            "IsAction": false,
+            "Config": "videoUrl:url",
+            "function_name": "LikeYoutubeVideo",
+            "Applet_id": 1
+        },
+        {
+            "Name": "Disike a Youtube video",
+            "Description": "Add a dislike to a video on Youtube",
+            "IsTemplate": true,
+            "IsAction": false,
+            "Config": "videoUrl:url",
+            "function_name": "DislikeYoutubeVideo",
+            "Applet_id": 1
+        },
+        {
+            "Name": "Subscribe to a Youtube channel",
+            "Description": "Subscribe to someone's channel on Youtube",
+            "IsTemplate": true,
+            "IsAction": false,
+            "Config": "channelUrl:url",
+            "function_name": "SubscribeYoutubeChannel",
+            "Applet_id": 1
+        }
+    ]
+}

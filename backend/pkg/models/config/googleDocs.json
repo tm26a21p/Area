@@ -1,0 +1,27 @@
+{
+    "Name": "Google Docs",
+    "Description": "Google Docs is an online word processor that lets you create and format documents and work with other people.",
+    "Icon": "https://cdn-icons-png.flaticon.com/512/5968/5968517.png",
+    "Color": "#60b1fc",
+    "button": {
+        "provider": "google",
+        "client_id": "425480709650-p65s65mki3ot2hojl7c49vtflnktg8g9.apps.googleusercontent.com",
+        "redirect_uri": "postmessage",
+        "auth": "https://accounts.google.com/o/oauth2/auth",
+        "scopes" : "https://www.googleapis.com/auth/documents https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email"
+    },
+    "actions": [
+        
+    ],
+    "reactions": [
+        {
+            "Name": "Create a Document",
+            "Description": "Create a new document in your Google Docs",
+            "IsTemplate": true,
+            "IsAction": false,
+            "Config": "name:text|body:text",
+            "function_name": "CreateGoogleDocsDocument",
+            "Applet_id": 1
+        }
+    ]
+}

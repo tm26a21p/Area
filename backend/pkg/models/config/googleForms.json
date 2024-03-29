@@ -1,0 +1,26 @@
+{
+    "Name": "Google Forms",
+    "Description": "Google Forms is a way to",
+    "Icon": "https://c.clc2l.com/t/g/o/google-forms-FlBdo4.png",
+    "Color": "#975df5",
+    "button": {
+        "provider": "google",
+        "client_id": "425480709650-p65s65mki3ot2hojl7c49vtflnktg8g9.apps.googleusercontent.com",
+        "redirect_uri": "postmessage",
+        "auth": "https://accounts.google.com/o/oauth2/auth",
+        "scopes": "https://www.googleapis.com/auth/drive https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email"
+    },
+    "actions": [
+    ],
+    "reactions": [
+        {
+            "Name": "Create a simple Google Forms",
+            "Description": "Create a one-question Google Forms",
+            "IsTemplate": true,
+            "IsAction": false,
+            "Config": "title:text|question:text|description:text|answers:text",
+            "function_name": "CreateSimpleForms",
+            "Applet_id": 1
+        }
+    ]
+}

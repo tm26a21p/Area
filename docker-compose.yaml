@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  frontend-web:
+    build: ./frontend
+    command: ["./waitforfile.sh", "/frontend/area/build/app/outputs/flutter-apk/app-release.apk"]
+    volumes:
+      - area:/frontend
+    ports:
+      - '8081:8081'
+  backend:
+    depends_on:
+      - dbpostgres
+    build: ./backend
+    volumes:
+      - ./backend:/usr/app
+    ports:
+      - '8080:8080'
+  dbpostgres: 
+    image: postgres:alpine
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=ABCDEFG
+      - POSTGRES_DB=postgres
+  mobile-app:
+    build: ./mobile-app
+    volumes:
+      - area:/mobile-app
+
+volumes:
+  area:
+    external: false
+

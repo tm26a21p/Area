@@ -1,0 +1,44 @@
+{
+    "Name": "Google Calendar",
+    "Description": "Google Calendar is a way to stare and organize your all days event.",
+    "Icon": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Calendar.max-1100x1100.png",
+    "Color": "#faaf6e",
+    "button": {
+        "provider": "google",
+        "client_id": "425480709650-p65s65mki3ot2hojl7c49vtflnktg8g9.apps.googleusercontent.com",
+        "redirect_uri": "postmessage",
+        "auth": "https://accounts.google.com/o/oauth2/auth",
+        "scopes" : "https://www.googleapis.com/auth/calendar https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email"
+    },
+    "actions": [
+    ],
+    "reactions": [
+        {
+            "Name": "Create a Google Event",
+            "Description": "Add a new event to your Google Calendar",
+            "IsTemplate": true,
+            "IsAction": false,
+            "Config": "summary:text|description:text|location:text|start:datetime-local|end:datetime-local",
+            "function_name": "CreateEvent",
+            "Applet_id": 1
+        },
+        {
+            "Name": "Create a weekly Event",
+            "Description": "Add a new weekly event to your Google Calendar",
+            "IsTemplate": true,
+            "IsAction": false,
+            "Config": "summary:text|description:text|location:text|start:time|end:time|which days:text",
+            "function_name": "CreateWeeklyEvent",
+            "Applet_id": 1
+        },
+        {
+            "Name": "Delete all the Google Event of the day",
+            "Description": "Delete all the Google Events of the day on your Google Calendar",
+            "IsTemplate": true,
+            "IsAction": false,
+            "Config": "",
+            "function_name": "DeleteAllDayEvent",
+            "Applet_id": 1
+        }
+    ]
+}

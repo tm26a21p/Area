@@ -1,0 +1,44 @@
+{
+    "Name": "Google Contacts",
+    "Description": "Google Contacts is a way to store and organize contact information about the people you communicate with. Each contact can contain basic information like names, email addresses, and phone numbers, but can also include extended information, like physical addresses, employer, department, or job title.",
+    "Icon": "https://files.jotform.com/jotformapps/fa7716f93e1a40894d4ea2ab704842d1.png",
+    "Color": "#2196F3",
+    "button": {
+        "provider": "google",
+        "client_id": "425480709650-p65s65mki3ot2hojl7c49vtflnktg8g9.apps.googleusercontent.com",
+        "redirect_uri": "postmessage",
+        "auth": "https://accounts.google.com/o/oauth2/auth",
+        "scopes" : "https://www.googleapis.com/auth/contacts https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email"
+    },
+    "actions": [
+    ],
+    "reactions": [
+        {
+            "Name": "Create a Google Contact",
+            "Description": "Add a new contact to your Google Contacts",
+            "IsTemplate": true,
+            "IsAction": false,
+            "Config": "givenName:text|familiyName:text|age:number|email:email|phone:tel",
+            "function_name": "GetUserContacts",
+            "Applet_id": 1
+        },
+        {
+            "Name": "Delete a Google Contact",
+            "Description": "Delete a contact to your Google Contacts",
+            "IsTemplate": true,
+            "IsAction": false,
+            "function_name": "DeleteUserContact",
+            "Config": "email:text",
+            "Applet_id": 1
+        },
+        {
+            "Name": "Drop Gnome Potion",
+            "Description": "Change one of your Google Contacts into a gnome at random",
+            "IsTemplate": true,
+            "IsAction": false,
+            "function_name": "DropGnomePotion",
+            "Config" : "",
+            "Applet_id": 1
+        }
+    ]
+}

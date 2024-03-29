@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string name="app_name">Area Project Mobile App</string>
+    <string name="facebook_app_id">429653812487595</string>
+    <string name="fb_login_protocol_scheme">fb429653812487595</string>
+    <string name="facebook_client_token">e479823a12ad718c0cd02a1aad482e09</string>
+    <string name="default_web_client_id">425480709650-p65s65mki3ot2hojl7c49vtflnktg8g9.apps.googleusercontent.com
+</string>
+</resources>
+

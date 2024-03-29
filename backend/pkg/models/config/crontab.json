@@ -1,0 +1,49 @@
+{
+    "Name": "Date & Time",
+    "Description": "Date & Time",
+    "Icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Simple_icon_time.svg/2560px-Simple_icon_time.svg.png ",
+    "Color": "#98B6B1",
+    "button": {},
+    "actions": [
+        {
+            "Name": "Every Minute",
+            "Description": "Launches a workflow every minute",
+            "IsTemplate": true,
+            "IsAction": true,
+            "function_name": "EveryMinute",
+            "Config": ""
+        },
+        {
+            "Name": "Every Hour",
+            "Description": "Launches a workflow every hour",
+            "IsTemplate": true,
+            "IsAction": true,
+            "function_name": "EveryHour",
+            "Config": ""
+        },
+        {
+            "Name": "Every Day",
+            "Description": "Launches a workflow every day",
+            "IsTemplate": true,
+            "IsAction": true,
+            "function_name": "EveryDay",
+            "Config": ""
+        },
+        {
+            "Name": "Every Week",
+            "Description": "Launches a workflow every week",
+            "IsTemplate": true,
+            "IsAction": true,
+            "function_name": "EveryWeek",
+            "Config": ""
+        },
+        {
+            "Name": "Every Month",
+            "Description": "Launches a workflow every month",
+            "IsTemplate": true,
+            "IsAction": true,
+            "function_name": "EveryMonth",
+            "Config": ""
+        }
+    ]
+}

@@ -1,0 +1,35 @@
+{
+    "Name": "Google Drive",
+    "Description": "Google Drive is a free cloud-based storage service that enables users to store and access files online. The service syncs stored documents, photos and more across all of the user's devices, including mobile devices, tablets and PCs.",
+    "Icon": "https://www.freeiconspng.com/uploads/google-drive-icon-18.png",
+    "Color": "#fce38d",
+    "button": {
+        "provider": "google",
+        "client_id": "425480709650-p65s65mki3ot2hojl7c49vtflnktg8g9.apps.googleusercontent.com",
+        "redirect_uri": "postmessage",
+        "auth": "https://accounts.google.com/o/oauth2/auth",
+        "scopes" : "https://www.googleapis.com/auth/docs https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email"
+    },
+    "actions": [
+        {
+            "Name": "Receive a file",
+            "Description": "When a file is uploaded to your Google Drive",
+            "IsTemplate": true,
+            "IsAction": true,
+            "Config": "videoUrl:url|comment:text",
+            "function_name": "ReceiveFileGoogleDrive",
+            "Applet_id": 1
+        }
+    ],
+    "reactions": [
+        {
+            "Name": "Empty trash",
+            "Description": "Empty the trash of your Google Drive",
+            "IsTemplate": true,
+            "IsAction": false,
+            "Config": "",
+            "function_name": "EmptyTrashGoogleDrive",
+            "Applet_id": 1
+        }
+    ]
+}
