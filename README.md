@@ -17,7 +17,7 @@ The project consists of two main components:
 - Registration and account creation
 - Authentication via username/password or OAuth2
 - User profile management
-- Create, update, and delete workflows
+- Create, update, and delete workflows (AREAs)
 
 ### Services
 - Subscription to various digital services (e.g., Outlook 365, Yammer, OneDrive, ~~Twitter~~X, Instagram, etc..)
